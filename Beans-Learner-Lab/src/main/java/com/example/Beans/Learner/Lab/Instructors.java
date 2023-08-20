@@ -5,24 +5,13 @@ import java.util.List;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class Instructors extends People<Instructor>{
-    public Instructors(List<Instructor> personList) {
-        super(personList);
+public class Instructors extends com.example.SpringBeansLearnerLab.models.People<Instructor> {
+    public Instructors() {
+        super();
     }
 
-
-    @Override
-    public Iterator<Instructor> iterator() {
-        return null;
+    public Instructors(Instructor... instructors){
+        super(instructors);
     }
 
-    @Override
-    public void forEach(Consumer<? super Instructor> action) {
-        super.forEach(action);
-    }
-
-    @Override
-    public Spliterator<Instructor> spliterator() {
-        return super.spliterator();
-    }
 }

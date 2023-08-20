@@ -7,14 +7,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class StudentConfig {
-
     @Bean(name = "students")
     public Students currentStudents(){
-        return new Students(null);
+        return new Students(new Student(3L, "Joe"));
     }
 
     @Bean(name = "previousStudents")
     public Students previousStudents(){
-        return new Students(null);
+        return new Students(new Student(2L, "Kyle"));
     }
 }
